@@ -25,7 +25,7 @@ RUN apk --no-cache add shadow && \
 # Source code
 RUN chown www-data:www-data /var/www
 COPY --chown=www-data:www-data ./ /var/www
-WORKDIR /var/www/app
+WORKDIR /var/www
 
 USER www-data
 
