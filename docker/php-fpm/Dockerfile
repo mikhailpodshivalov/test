@@ -25,13 +25,13 @@ RUN apk --no-cache add shadow && \
 # Source code
 RUN chown www-data:www-data /var/www
 COPY --chown=www-data:www-data ./ /var/www
-WORKDIR /var/www
+WORKDIR /var/www/app
 
 USER www-data
 
 # Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-#RUN composer install --no-interaction
+RUN #composer install --no-interaction
 
 CMD php-fpm
 
