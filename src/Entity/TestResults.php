@@ -61,7 +61,7 @@ class TestResults
 
     public function isQuestionRight(): ?bool
     {
-        return empty(array_filter($this->answers->toArray(), fn(Answer $answer) => !$answer->isQuestionRight()));
+        return empty(array_filter($this->answers->toArray(), fn(Answer $answer) => !$answer->isRightAnswer()));
     }
 
     /**
@@ -75,6 +75,19 @@ class TestResults
     public function addAnswer(Answer $answer): static
     {
         if (!$this->answers->contains($answer)) {
+            $this->answers->add($answer);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param ArrayCollection $answers
+     * @return $this
+     */
+    public function addAnswers(ArrayCollection $answers): static
+    {
+        foreach ($answers as $answer) {
             $this->answers->add($answer);
         }
 

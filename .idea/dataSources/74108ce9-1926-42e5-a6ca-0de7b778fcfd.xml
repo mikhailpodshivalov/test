@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>792</IntrospectionStateNumber>
+      <IntrospectionStateNumber>798</IntrospectionStateNumber>
       <ServerVersion>16.4</ServerVersion>
       <StartupTime>1725854290</StartupTime>
       <TimeZones>true ACDT
@@ -802,7 +802,7 @@ true posixrules
 13255||10|C|G
 13255||-9223372036854775808|U|G
 13255||10|U|G</Grants>
-      <IntrospectionStateNumber>792</IntrospectionStateNumber>
+      <IntrospectionStateNumber>798</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4221,8 +4221,8 @@ true posixrules
     <schema id="263" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>792</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-09-09.05:39:24</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>798</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-09-09.07:21:37</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>524</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>

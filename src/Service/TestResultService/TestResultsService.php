@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace App\Service\TestResultService;
+
 use App\Entity\Question;
 use Doctrine\Common\Collections\ArrayCollection;
 
