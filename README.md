@@ -1,5 +1,8 @@
 # test
-git clone https://github.com/mikhailpodshivalov/test
-docker-compose -f ./docker/docker-compose.yml build
-php bin/console doctrine:fixtures:load
+1. git clone https://github.com/mikhailpodshivalov/test.git
+2. cd test
+3. make start
+4. make composer
+5. make fixtures
+6. make test
 
