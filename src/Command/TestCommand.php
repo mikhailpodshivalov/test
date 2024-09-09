@@ -13,9 +13,11 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\QuestionHelper;
+use Symfony\Component\Console\Helper\Table;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\ChoiceQuestion;
+use Symfony\Component\Console\Style\SymfonyStyle;
 
 #[AsCommand(
     name: 'app:test',
@@ -103,28 +105,33 @@ final class TestCommand extends Command
 
     /**
      * @param array $result
+     * @param OutputInterface $output
      * @return void
      */
     private function printResults(array $result, OutputInterface $output): void
     {
-        $wrongQuestion = [];
-        $rightQuestion = [];
+        $wrongQuestions = [];
+        $rightQuestions = [];
         /** @var TestResults $testResults */
         foreach ($result as $testResults) {
             switch ($testResults->isQuestionRight()) {
                 case true:
-                    $rightQuestion[] = $testResults;
+                    $rightQuestions[] = $testResults->getQuestion()->getQuestion();
                     break;
                 case false:
-                    $wrongQuestion[] = $testResults;
+                    $wrongQuestions[] = $testResults->getQuestion()->getQuestion();
                     break;
             }
         }
 
-        $output->writeln('Right question:');
-        $output->writeln(array_map(fn(TestResults $testResults) => $testResults->getQuestion()->getQuestion(), $rightQuestion));
+        $output->writeln('Right questions:');
+        $output->write(implode(' | ', $rightQuestions));
+        $output->writeln('');
+        $output->writeln('---------------------------');
 
-        $output->writeln('Wrong question:');
-        $output->writeln(array_map(fn(TestResults $testResults) => $testResults->getQuestion()->getQuestion(), $wrongQuestion));
+        $output->writeln('Wrong questions:');
+        $output->write(implode(' | ', $wrongQuestions));
+        $output->writeln('');
+        $output->writeln('---------------------------');
     }
 }

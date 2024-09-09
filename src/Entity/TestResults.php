@@ -61,7 +61,7 @@ class TestResults
 
     public function isQuestionRight(): ?bool
     {
-        return empty(array_filter($this->answers->toArray(), fn(Answer $answer) => !$answer->isRightAnswer()));
+        return empty(array_filter($this->getAnswers()->toArray(), fn(Answer $answer) => !$answer->isRightAnswer()));
     }
 
     /**

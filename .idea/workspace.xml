@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e2c2e73-1059-4786-863b-3a1f923214a5" name="Changes" comment="Added TestResults entity">
-      <change afterPath="$PROJECT_DIR$/src/Command/TestCommand.php" afterDir="false" />
+    <list default="true" id="5e2c2e73-1059-4786-863b-3a1f923214a5" name="Changes" comment="Added TestCommand">
       <change afterPath="$PROJECT_DIR$/src/Controller/CheckTestController.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Controller/TestController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/CustomerAnswerRepository.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/templates/check_test/index.html.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/templates/test/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/74108ce9-1926-42e5-a6ca-0de7b778fcfd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/74108ce9-1926-42e5-a6ca-0de7b778fcfd.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/74108ce9-1926-42e5-a6ca-0de7b778fcfd/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/74108ce9-1926-42e5-a6ca-0de7b778fcfd/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Command/TestCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/TestCommand.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/TestResults.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/TestResults.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/TestResultService/TestResultsService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/TestResultService/TestResultsService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/TestResultService/TestResultsServiceInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/TestResultService/TestResultsServiceInterface.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +254,7 @@
       <workItem from="1725785682573" duration="2012000" />
       <workItem from="1725788041272" duration="1316000" />
       <workItem from="1725792460149" duration="23641000" />
-      <workItem from="1725854204847" duration="14636000" />
+      <workItem from="1725854204847" duration="18200000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed environment">
       <option name="closed" value="true" />
@@ -294,7 +288,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725863682519</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added TestCommand">
+      <option name="closed" value="true" />
+      <created>1725870401906</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1725870401906</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,6 +307,7 @@
     <MESSAGE value="Added question and answer entities" />
     <MESSAGE value="Added questions fixtures" />
     <MESSAGE value="Added TestResults entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added TestResults entity" />
+    <MESSAGE value="Added TestCommand" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added TestCommand" />
   </component>
 </project>
