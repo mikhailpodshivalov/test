@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TestController!{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    <h1>Hello! This is the test!</h1>
+
+    The following questions must be answered. There may be several possible answers:
+    <form action="{{ path('app_check_test') }}" method="POST">
+        <ul>
+            {% for question in questions %}
+                <li>{{ question.getQuestion() }}:</li>
+                <ol>
+                    {% for answer in question.getAnswers() %}
+                        <li>{{ answer.getAnswer() }}</li>
+                    {% endfor %}
+                </ol>
+                <label for="{{ question.getId() }}">Enter the correct answer numbers separated by commas:</label>
+                <input id="{{ question.getId() }}" name="{{ question.getId() }}" type="text" required pattern="[0-9.,]+" size="50">
+            {% endfor %}
+        </ul>
+        <button type="submit">Send</button>
+    </form>
+</div>
+{% endblock %}
