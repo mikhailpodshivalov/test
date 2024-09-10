@@ -1,7 +1,8 @@
 DOCKER_COMPOSE = docker-compose
 PATH_DOCKER    = ./docker/docker-compose.yml
 EXEC_PHP       = $(DOCKER_COMPOSE) exec -it php
-EXEC	       = docker exec -it -u root php-fpm
+EXEC_ROOT      = docker exec -it -u root php-fpm
+EXEC           = docker exec -it php-fpm
 SYMFONY        = $(EXEC) php bin/console
 COMPOSER       = composer
 
@@ -16,7 +17,7 @@ stop:
 
 ## composer install
 composer:
-	$(EXEC) $(COMPOSER) install
+	$(EXEC_ROOT) $(COMPOSER) install
 
 ## migration
 migrate:
