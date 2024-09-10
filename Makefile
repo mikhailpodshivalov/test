@@ -18,6 +18,10 @@ stop:
 composer:
 	$(EXEC) $(COMPOSER) install
 
+## migration
+migrate:
+	$(SYMFONY) doctrine:migrations:migrate
+
 ## fill db
 fixtures:
 	$(SYMFONY) doctrine:fixtures:load
